@@ -1,5 +1,5 @@
 from sqladmin import ModelAdmin
-from .models import Category, Rubric
+from products.models import Category, Rubric
 
 
 class CategoryAdmin(ModelAdmin, model=Category):

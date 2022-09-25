@@ -1,4 +1,9 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
+from db import get_session
+
+from .models import Category, Rubric, Product
 
 router = APIRouter(
     prefix='/product',
